@@ -218,7 +218,7 @@
           <p>
 			  Interested in working together or have questions? Please fill out the form below and I will respond promptly. 
           </p>
-          <form method="post" action="google.com">
+          <form method="post" action="#">
             <div class="fields">
               <div class="field">
                 <label for="name">Name</label>
@@ -234,9 +234,10 @@
               </div>
             </div>
             <ul class="actions">
-              <li><input type="submit" value="Send Message" /></li>
+              <li><input id="send" name="submit" type="submit" value="Send Message" /></li>
             </ul>
-          </form>
+		  </form>
+		  <h3><?php include "action_page.php"?></h3>
           <ul class="contact">
             <li class="icon solid fa-home">
               Daniel Milano<br />
