@@ -124,12 +124,27 @@
     });
 })(jQuery);
 
-const init = function() {
-  document.getElementById("send-button").addEventListener("click", send);
-};
+const sgMail = require("@sendgrid/mail");
+document.getElementById("send").addEventListener("click", sendMail);
 
-const send = function() {
-  ev.preventDefault;
-  document.getElementById("send-button").submit();
-  console.log("success");
+const sendMail = function(e) {
+  e.preventDefault;
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+  const msg = {
+    to: "dmilano857@gmail.com",
+    from: "test@example.com",
+    subject: "Sending with Twilio SendGrid is Fun",
+    text: "and easy to do anywhere, even with Node.js",
+    html: "<strong>and easy to do anywhere, even with Node.js</strong>"
+  };
+  //ES6
+  sgMail.send(msg).then(() => {}, console.error);
+  //ES8
+  (async () => {
+    try {
+      await sgMail.send(msg);
+    } catch (err) {
+      console.error(err.toString());
+    }
+  })();
 };
