@@ -4212,8 +4212,8 @@ body.is-preload #banner p {
 
 @media screen and (max-width: 736px) {
   #footer {
-    margin-top: -2.5em;
-    padding-top: 2.5em;
+    margin-top: -5.5em;
+    padding-top: 2.9em;
   }
 
   #footer .inner {
@@ -4246,4 +4246,15 @@ body.is-preload #banner p {
   #footer .inner {
     padding: 2em 1.5em 0.1em 1.5em;
   }
+}
+
+.images {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.aboutMeImage {
+  border-radius: 100%;
+  width: 35%;
+  margin: 2%;
 }
