@@ -351,7 +351,7 @@ i {
 }
 
 p {
-  margin: 0 0 2em 0;
+  margin: 0 0 1em 0;
 }
 
 h1,
@@ -3475,6 +3475,7 @@ body.is-menu-visible #menu .inner {
 
 #banner {
   padding: 10em 0 4.75em 0;
+  text-align: center;
 }
 
 #banner .inner {
