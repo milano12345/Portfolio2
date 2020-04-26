@@ -4,7 +4,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-(function($) {
+(function ($) {
   var $window = $(window),
     $body = $("body"),
     $header = $("#header"),
@@ -16,33 +16,33 @@
     large: "(max-width: 1280px)",
     medium: "(max-width: 980px)",
     small: "(max-width: 736px)",
-    xsmall: "(max-width: 480px)"
+    xsmall: "(max-width: 480px)",
   });
 
   // Play initial animations on page load.
-  $window.on("load", function() {
-    window.setTimeout(function() {
+  $window.on("load", function () {
+    window.setTimeout(function () {
       $body.removeClass("is-preload");
     }, 100);
   });
 
   // Header.
   if ($banner.length > 0 && $header.hasClass("alt")) {
-    $window.on("resize", function() {
+    $window.on("resize", function () {
       $window.trigger("scroll");
     });
 
     $banner.scrollex({
       bottom: $header.outerHeight(),
-      terminate: function() {
+      terminate: function () {
         $header.removeClass("alt");
       },
-      enter: function() {
+      enter: function () {
         $header.addClass("alt");
       },
-      leave: function() {
+      leave: function () {
         $header.removeClass("alt");
-      }
+      },
     });
   }
 
@@ -51,40 +51,40 @@
 
   $menu._locked = false;
 
-  $menu._lock = function() {
+  $menu._lock = function () {
     if ($menu._locked) return false;
 
     $menu._locked = true;
 
-    window.setTimeout(function() {
+    window.setTimeout(function () {
       $menu._locked = false;
     }, 350);
 
     return true;
   };
 
-  $menu._show = function() {
+  $menu._show = function () {
     if ($menu._lock()) $body.addClass("is-menu-visible");
   };
 
-  $menu._hide = function() {
+  $menu._hide = function () {
     if ($menu._lock()) $body.removeClass("is-menu-visible");
   };
 
-  $menu._toggle = function() {
+  $menu._toggle = function () {
     if ($menu._lock()) $body.toggleClass("is-menu-visible");
   };
 
   $menu
     .appendTo($body)
-    .on("click", function(event) {
+    .on("click", function (event) {
       event.stopPropagation();
 
       // Hide.
       $menu._hide();
     })
     .find(".inner")
-    .on("click", ".close", function(event) {
+    .on("click", ".close", function (event) {
       event.preventDefault();
       event.stopPropagation();
       event.stopImmediatePropagation();
@@ -92,10 +92,10 @@
       // Hide.
       $menu._hide();
     })
-    .on("click", function(event) {
+    .on("click", function (event) {
       event.stopPropagation();
     })
-    .on("click", "a", function(event) {
+    .on("click", "a", function (event) {
       var href = $(this).attr("href");
 
       event.preventDefault();
@@ -105,46 +105,82 @@
       $menu._hide();
 
       // Redirect.
-      window.setTimeout(function() {
+      window.setTimeout(function () {
         window.location.href = href;
       }, 350);
     });
 
   $body
-    .on("click", 'a[href="#menu"]', function(event) {
+    .on("click", 'a[href="#menu"]', function (event) {
       event.stopPropagation();
       event.preventDefault();
 
       // Toggle.
       $menu._toggle();
     })
-    .on("keydown", function(event) {
+    .on("keydown", function (event) {
       // Hide on escape.
       if (event.keyCode == 27) $menu._hide();
     });
 })(jQuery);
 
-const sgMail = require("@sendgrid/mail");
-document.getElementById("send").addEventListener("click", sendMail);
+//animation
 
-const sendMail = function(e) {
-  e.preventDefault;
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-  const msg = {
-    to: "dmilano857@gmail.com",
-    from: "test@example.com",
-    subject: "Sending with Twilio SendGrid is Fun",
-    text: "and easy to do anywhere, even with Node.js",
-    html: "<strong>and easy to do anywhere, even with Node.js</strong>"
-  };
-  //ES6
-  sgMail.send(msg).then(() => {}, console.error);
-  //ES8
-  (async () => {
-    try {
-      await sgMail.send(msg);
-    } catch (err) {
-      console.error(err.toString());
+var TxtRotate = function (el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 1000;
+  this.txt = "";
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function () {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+
+  var that = this;
+  var delta = 200 - Math.random() * 100;
+
+  if (this.isDeleting) {
+    delta /= 2;
+  }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === "") {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function () {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function () {
+  var elements = document.getElementsByClassName("txt-rotate");
+  for (var i = 0; i < elements.length; i++) {
+    var toRotate = elements[i].getAttribute("data-rotate");
+    var period = elements[i].getAttribute("data-period");
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
     }
-  })();
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+  document.body.appendChild(css);
 };
