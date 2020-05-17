@@ -4264,7 +4264,7 @@ body.is-preload #banner p {
   animation-name: slideLeft;
   -webkit-animation-name: slideLeft;
   animation-duration: 5s;
-  -webkit-animation-duration: 1s;
+  -webkit-animation-duration: 5s;
   visibility: visible;
   opacity: 1 !important;
 }
@@ -4299,7 +4299,7 @@ body.is-preload #banner p {
   animation-name: slideRight;
   -webkit-animation-name: slideRight;
   animation-duration: 5s;
-  -webkit-animation-duration: 1s;
+  -webkit-animation-duration: 5s;
   visibility: visible;
   opacity: 1 !important;
 }
