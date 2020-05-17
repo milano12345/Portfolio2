@@ -197,8 +197,8 @@ function myFunction() {
     document.getElementById("design").className = "slideLeft";
   }
   if (
-    document.body.scrollTop > 500 ||
-    document.documentElement.scrollTop > 500
+    document.body.scrollTop > 800 ||
+    document.documentElement.scrollTop > 800
   ) {
     document.getElementById("frontend").className = "slideRight";
   }
