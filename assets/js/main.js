@@ -191,20 +191,20 @@ window.onscroll = function () {
 
 function myFunction() {
   if (
-    document.body.scrollTop > 200 ||
-    document.documentElement.scrollTop > 200
+    document.body.scrollTop > 150 ||
+    document.documentElement.scrollTop > 150
   ) {
     document.getElementById("design").className = "slideLeft";
   }
   if (
-    document.body.scrollTop > 800 ||
-    document.documentElement.scrollTop > 800
+    document.body.scrollTop > 900 ||
+    document.documentElement.scrollTop > 900
   ) {
     document.getElementById("frontend").className = "slideRight";
   }
   if (
-    document.body.scrollTop > 2000 ||
-    document.documentElement.scrollTop > 2000
+    document.body.scrollTop > 2100 ||
+    document.documentElement.scrollTop > 2100
   ) {
     document.getElementById("backend").className = "slideLeft";
   }
