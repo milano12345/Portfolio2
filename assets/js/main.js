@@ -203,8 +203,8 @@ function myFunction() {
     document.getElementById("frontend").className = "slideRight";
   }
   if (
-    document.body.scrollTop > 2200 ||
-    document.documentElement.scrollTop > 2200
+    document.body.scrollTop > 2000 ||
+    document.documentElement.scrollTop > 2000
   ) {
     document.getElementById("backend").className = "slideLeft";
   }
