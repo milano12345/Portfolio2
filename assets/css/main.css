@@ -4266,7 +4266,6 @@ body.is-preload #banner p {
   animation-duration: 2s;
   -webkit-animation-duration: 2s;
   visibility: visible;
-  opacity: 1 !important;
 }
 
 @keyframes slideLeft {
@@ -4291,17 +4290,12 @@ body.is-preload #banner p {
   }
 }
 
-#design {
-  opacity: 0;
-}
-
 .slideRight {
   animation-name: slideRight;
   -webkit-animation-name: slideRight;
   animation-duration: 2s;
   -webkit-animation-duration: 2s;
   visibility: visible;
-  opacity: 1 !important;
 }
 
 @keyframes slideRight {
@@ -4324,12 +4318,4 @@ body.is-preload #banner p {
     opacity: 1;
     -webkit-transform: translateY(0%);
   }
-}
-
-#frontend {
-  opacity: 0;
-}
-
-#backend {
-  opacity: 0;
 }
