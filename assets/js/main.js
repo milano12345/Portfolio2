@@ -224,20 +224,20 @@ function myFunction() {
     document.getElementById("p1").className = "fade-in";
   }
   if (
-    document.body.scrollTop > 2600 ||
-    document.documentElement.scrollTop > 2600
+    document.body.scrollTop > 2800 ||
+    document.documentElement.scrollTop > 2800
   ) {
     document.getElementById("p2").className = "fade-in";
   }
   if (
-    document.body.scrollTop > 3600 ||
-    document.documentElement.scrollTop > 3600
+    document.body.scrollTop > 3800 ||
+    document.documentElement.scrollTop > 3800
   ) {
     document.getElementById("p3").className = "fade-in";
   }
   if (
-    document.body.scrollTop > 4600 ||
-    document.documentElement.scrollTop > 4600
+    document.body.scrollTop > 4800 ||
+    document.documentElement.scrollTop > 4800
   ) {
     document.getElementById("p4").className = "fade-in";
   }
