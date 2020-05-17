@@ -190,19 +190,55 @@ window.onscroll = function () {
 };
 
 function myFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+  if (document.body.scrollTop > 25 || document.documentElement.scrollTop > 25) {
     document.getElementById("design").className = "slideLeft";
   }
   if (
-    document.body.scrollTop > 700 ||
-    document.documentElement.scrollTop > 700
+    document.body.scrollTop > 600 ||
+    document.documentElement.scrollTop > 600
   ) {
     document.getElementById("frontend").className = "slideRight";
   }
   if (
-    document.body.scrollTop > 1400 ||
-    document.documentElement.scrollTop > 1400
+    document.body.scrollTop > 1300 ||
+    document.documentElement.scrollTop > 1300
   ) {
     document.getElementById("backend").className = "slideLeft";
+  }
+  if (
+    document.body.scrollTop > 1700 ||
+    document.documentElement.scrollTop > 1700
+  ) {
+    document.getElementById("recent").className = "slideRight";
+  }
+  if (
+    document.body.scrollTop > 1750 ||
+    document.documentElement.scrollTop > 1750
+  ) {
+    document.getElementById("text").className = "slideLeft";
+  }
+  if (
+    document.body.scrollTop > 2000 ||
+    document.documentElement.scrollTop > 2000
+  ) {
+    document.getElementById("p1").className = "fade-in";
+  }
+  if (
+    document.body.scrollTop > 2600 ||
+    document.documentElement.scrollTop > 2600
+  ) {
+    document.getElementById("p2").className = "fade-in";
+  }
+  if (
+    document.body.scrollTop > 3600 ||
+    document.documentElement.scrollTop > 3600
+  ) {
+    document.getElementById("p3").className = "fade-in";
+  }
+  if (
+    document.body.scrollTop > 4600 ||
+    document.documentElement.scrollTop > 4600
+  ) {
+    document.getElementById("p4").className = "fade-in";
   }
 }
