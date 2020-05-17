@@ -191,8 +191,8 @@ window.onscroll = function () {
 
 function myFunction() {
   if (
-    document.body.scrollTop > 100 ||
-    document.documentElement.scrollTop > 100
+    document.body.scrollTop > 200 ||
+    document.documentElement.scrollTop > 200
   ) {
     document.getElementById("design").className = "slideLeft";
   }
@@ -203,8 +203,8 @@ function myFunction() {
     document.getElementById("frontend").className = "slideRight";
   }
   if (
-    document.body.scrollTop > 1600 ||
-    document.documentElement.scrollTop > 1600
+    document.body.scrollTop > 2000 ||
+    document.documentElement.scrollTop > 2000
   ) {
     document.getElementById("backend").className = "slideLeft";
   }
