@@ -2816,6 +2816,7 @@ ul.contact li:first-child {
 @media screen and (max-width: 736px) {
   ul.contact li {
     margin: 1.5em 0 0 0;
+    font-size: 0.8rem;
   }
 }
 
