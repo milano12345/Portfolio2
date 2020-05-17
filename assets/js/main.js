@@ -184,3 +184,28 @@ window.onload = function () {
   css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
   document.body.appendChild(css);
 };
+
+window.onscroll = function () {
+  myFunction();
+};
+
+function myFunction() {
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
+    document.getElementById("design").className = "slideLeft";
+  }
+  if (
+    document.body.scrollTop > 500 ||
+    document.documentElement.scrollTop > 500
+  ) {
+    document.getElementById("frontend").className = "slideRight";
+  }
+  if (
+    document.body.scrollTop > 1600 ||
+    document.documentElement.scrollTop > 1600
+  ) {
+    document.getElementById("backend").className = "slideLeft";
+  }
+}
