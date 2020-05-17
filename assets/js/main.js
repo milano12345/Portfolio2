@@ -197,14 +197,14 @@ function myFunction() {
     document.getElementById("design").className = "slideLeft";
   }
   if (
-    document.body.scrollTop > 900 ||
-    document.documentElement.scrollTop > 900
+    document.body.scrollTop > 1100 ||
+    document.documentElement.scrollTop > 1100
   ) {
     document.getElementById("frontend").className = "slideRight";
   }
   if (
-    document.body.scrollTop > 2100 ||
-    document.documentElement.scrollTop > 2100
+    document.body.scrollTop > 2300 ||
+    document.documentElement.scrollTop > 2300
   ) {
     document.getElementById("backend").className = "slideLeft";
   }
