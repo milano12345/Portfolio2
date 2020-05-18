@@ -193,18 +193,21 @@ window.onscroll = function () {
 function myFunction() {
   if (document.body.scrollTop > 25 || document.documentElement.scrollTop > 25) {
     document.getElementById("design").className = "slideLeft";
+    document.getElementById("image2").classList.add("bounce");
   }
   if (
     document.body.scrollTop > 600 ||
     document.documentElement.scrollTop > 600
   ) {
     document.getElementById("frontend").className = "slideRight";
+    document.getElementById("image3").classList.add("bounce");
   }
   if (
     document.body.scrollTop > 1300 ||
     document.documentElement.scrollTop > 1300
   ) {
     document.getElementById("backend").className = "slideLeft";
+    document.getElementById("image4").classList.add("bounce");
   }
   if (
     document.body.scrollTop > 1700 ||
