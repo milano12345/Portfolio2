@@ -287,7 +287,13 @@ document.getElementById("image4").onclick = function () {
   }
 };
 
+// Sunset MODE
+
 document.getElementById("darkMode").onclick = function () {
+  var audio = new Audio("images/swish.mp3");
+  audio.play();
+  console.log("working");
+
   if (document.getElementById("darkMode").classList.length < 1) {
     document.getElementById("darkMode").classList.add("darkMode");
     document.getElementById("darkMode").classList.add("dark-text");
