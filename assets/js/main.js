@@ -286,3 +286,19 @@ document.getElementById("image4").onclick = function () {
     document.getElementById("image4").classList.add("bounce");
   }
 };
+
+document.getElementById("darkMode").onclick = function () {
+  if (document.getElementById("darkMode").classList.length < 1) {
+    document.getElementById("darkMode").classList.add("darkMode");
+    document.getElementById("darkMode").classList.add("dark-text");
+    document.getElementById("banner").classList.add("dark");
+    document.getElementById("h2").classList.add("dark-text");
+    document.getElementById("wrapper").classList.add("dark-wrapper");
+  } else {
+    document.getElementById("darkMode").classList.remove("darkMode");
+    document.getElementById("darkMode").classList.remove("dark-text");
+    document.getElementById("banner").classList.remove("dark");
+    document.getElementById("h2").classList.remove("dark-text");
+    document.getElementById("wrapper").classList.remove("dark-wrapper");
+  }
+};

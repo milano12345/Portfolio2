@@ -3087,16 +3087,6 @@ button:disabled,
   opacity: 0.25;
 }
 
-@media screen and (max-width: 480px) {
-  input[type="submit"],
-  input[type="reset"],
-  input[type="button"],
-  button,
-  .button {
-    padding: 0;
-  }
-}
-
 /* Features */
 
 .features {
@@ -4414,4 +4404,22 @@ body.is-preload #banner p {
 #p6,
 #p5 {
   visibility: hidden;
+}
+
+.dark {
+  background: #ff4e50 !important; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #f9d423,
+    #ff4e50
+  ) !important; /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #f9d423,
+    #ff4e50
+  ) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.dark-text {
+  color: black !important;
 }
