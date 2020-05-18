@@ -170,6 +170,7 @@ TxtRotate.prototype.tick = function () {
 };
 
 window.onload = function () {
+  document.getElementById("image1").classList.add("bounce");
   var elements = document.getElementsByClassName("txt-rotate");
   for (var i = 0; i < elements.length; i++) {
     var toRotate = elements[i].getAttribute("data-rotate");
@@ -241,4 +242,32 @@ function myFunction() {
   ) {
     document.getElementById("p4").className = "fade-in";
   }
+  if (
+    document.body.scrollTop > 5200 ||
+    document.documentElement.scrollTop > 5200
+  ) {
+    document.getElementById("p5").className = "slideRight";
+  }
+  if (
+    document.body.scrollTop > 5300 ||
+    document.documentElement.scrollTop > 5300
+  ) {
+    document.getElementById("p6").className = "slideLeft";
+  }
 }
+
+function bounce() {
+  console.log("working");
+}
+
+document.getElementById("image2").onclick = function () {
+  document.getElementById("image2").classList.add("bounce");
+};
+
+document.getElementById("image3").onclick = function () {
+  document.getElementById("image3").classList.add("bounce");
+};
+
+document.getElementById("image4").onclick = function () {
+  document.getElementById("image4").classList.add("bounce");
+};

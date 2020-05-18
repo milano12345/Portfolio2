@@ -47,8 +47,9 @@
         <span
            class="txt-rotate"
            data-period="500"
-           data-rotate='["Welcome!","Im Daniel.", "I write code.", "Javascript.", "React.", "Node.", "and many more!" ]'></span>
+           data-rotate='["Welcome!","My name is Daniel.", "I write code.", "Javascript.", "React.", "Node.", "and many more!" ]'></span>
       </h2>
+      <img class="image" id="image1" style="width:30%" src="images/milano3.jpg" alt="Daniel Milano"/>
       </div>
 
       <!-- Wrapper -->
@@ -56,7 +57,7 @@
         <!-- One -->
         <section id="one" class="wrapper spotlight style1">
           <div class="inner">
-            <a href="#" class="image"><img src="images/headerphoto.jpg" alt="Daniel Milano"/></a>
+            <a class="image"><img id="image2" src="images/headerphoto.jpg" alt="Daniel Milano"/></a>
             <div id="design" class="content">
               <h2 class="major">Designer</h2>
               <div>
@@ -82,7 +83,7 @@
         <!-- Two -->
         <section id="two" class="wrapper alt spotlight style2">
           <div class="inner">
-            <a href="#" class="image"><img src="images/code.jpg" alt=""/></a>
+            <a class="image"><img id="image3" src="images/code.jpg" alt="code"/></a>
             <div Id="frontend" class="content">
               <h2 class="major">Front-end Developer</h2>
               <p>
@@ -126,7 +127,7 @@
         <!-- Three -->
         <section id="three" class="wrapper spotlight style3">
           <div class="inner">
-            <a href="#" class="image"><img src="images/code2.jpg" alt=""/></a>
+            <a class="image"><img id="image4" src="images/code2.jpg" alt="code"/></a>
             <div id="backend" class="content">
               <h2 class="major">Back-end Developer</h2>
               <p>
@@ -225,11 +226,12 @@
       <!-- Footer -->
       <section id="footer">
         <div class="inner">
-          <h2 class="major">Get in touch</h2>
-          <p>
-			  Interested in working together or have questions? Please fill out the form below and I will respond promptly. 
+          <h2 class="major" id="p6">Get in touch</h2>
+          <p id="p5">
+            Interested in working together or have questions? Please fill out
+            the form below and I will respond promptly.
           </p>
-          <form method="POST" action="https://formspree.io/myydweal" >
+          <form method="post" action="https://formspree.io/myydweal">
             <div class="fields">
               <div class="field">
                 <label for="name">Name</label>
@@ -245,9 +247,16 @@
               </div>
             </div>
             <ul class="actions">
-              <li><input id="send" name="submit" type="submit" value="Send Message" /></li>
+              <li>
+                <input
+                  id="send"
+                  name="submit"
+                  type="submit"
+                  value="Send Message"
+                />
+              </li>
             </ul>
-		  </form>
+          </form>
           <ul class="contact">
             <li class="icon solid fa-home">
               Daniel Milano<br />
@@ -259,10 +268,10 @@
               <a href="#">dmilano857@gmail.com</a>
             </li>
             <li class="icon brands fa-linkedin">
-              <a href="http://linkedin.com/in/daniel-milano-90088b18a/">linkedin.com/in/daniel-milano-90088b18a/</a>
+              <a href="#">linkedin.com/in/daniel-milano-90088b18a/</a>
             </li>
             <li class="icon brands fa-github">
-              <a href="http://github.com/milano12345">github.com/milano12345</a>
+              <a href="#">github.com/milano12345</a>
             </li>
           </ul>
           <ul class="copyright">
@@ -271,7 +280,6 @@
         </div>
       </section>
     </div>
-
     <!-- Scripts -->
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
@@ -281,7 +289,6 @@
     
         <!-- Include all compiled plugins (below), or include individual files as needed -->
     
-    <script src="./assets/js/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>
