@@ -261,13 +261,28 @@ function bounce() {
 }
 
 document.getElementById("image2").onclick = function () {
-  document.getElementById("image2").classList.add("bounce");
+  if (document.getElementById("image2").classList.length > 0) {
+    document.getElementById("image2").classList.remove("bounce");
+    document.getElementById("image2").classList.add("slideLeft");
+  } else {
+    document.getElementById("image2").classList.add("bounce");
+  }
 };
 
 document.getElementById("image3").onclick = function () {
-  document.getElementById("image3").classList.add("bounce");
+  if (document.getElementById("image3").classList.length > 0) {
+    document.getElementById("image3").classList.remove("bounce");
+    document.getElementById("image3").classList.add("slideLeft");
+  } else {
+    document.getElementById("image3").classList.add("bounce");
+  }
 };
 
 document.getElementById("image4").onclick = function () {
-  document.getElementById("image4").classList.add("bounce");
+  if (document.getElementById("image4").classList.length > 0) {
+    document.getElementById("image4").classList.remove("bounce");
+    document.getElementById("image4").classList.add("slideLeft");
+  } else {
+    document.getElementById("image4").classList.add("bounce");
+  }
 };
