@@ -186,11 +186,24 @@ window.onload = function () {
   document.body.appendChild(css);
 };
 
-window.onscroll = function () {
-  myFunction();
-};
+function mediaFunction(x) {
+  if (x.matches) {
+    // If media query matches
+    window.onscroll = function () {
+      mobileVersion();
+    };
+  } else {
+    window.onscroll = function () {
+      desktopVersion();
+    };
+  }
+}
 
-function myFunction() {
+var x = window.matchMedia("(max-width: 700px)");
+mediaFunction(x); // Call listener function at run time
+x.addListener(mediaFunction); // Attach listener function on state changes
+
+function mobileVersion() {
   if (document.body.scrollTop > 25 || document.documentElement.scrollTop > 25) {
     document.getElementById("design").className = "slideLeft";
     document.getElementById("image2").classList.add("bounce");
@@ -259,8 +272,76 @@ function myFunction() {
   }
 }
 
-function bounce() {
-  console.log("working");
+function desktopVersion() {
+  if (
+    document.body.scrollTop > 600 ||
+    document.documentElement.scrollTop > 600
+  ) {
+    document.getElementById("design").className = "slideLeft";
+    document.getElementById("image2").classList.add("bounce");
+  }
+  if (
+    document.body.scrollTop > 1200 ||
+    document.documentElement.scrollTop > 1200
+  ) {
+    document.getElementById("frontend").className = "slideRight";
+    document.getElementById("image3").classList.add("bounce");
+  }
+  if (
+    document.body.scrollTop > 1900 ||
+    document.documentElement.scrollTop > 1900
+  ) {
+    document.getElementById("backend").className = "slideLeft";
+    document.getElementById("image4").classList.add("bounce");
+  }
+  if (
+    document.body.scrollTop > 2300 ||
+    document.documentElement.scrollTop > 2300
+  ) {
+    document.getElementById("recent").className = "slideRight";
+  }
+  if (
+    document.body.scrollTop > 2400 ||
+    document.documentElement.scrollTop > 2400
+  ) {
+    document.getElementById("text").className = "slideLeft";
+  }
+  if (
+    document.body.scrollTop > 2600 ||
+    document.documentElement.scrollTop > 2600
+  ) {
+    document.getElementById("p1").className = "fade-in";
+  }
+  if (
+    document.body.scrollTop > 2700 ||
+    document.documentElement.scrollTop > 2700
+  ) {
+    document.getElementById("p2").className = "fade-in";
+  }
+  if (
+    document.body.scrollTop > 3200 ||
+    document.documentElement.scrollTop > 3200
+  ) {
+    document.getElementById("p3").className = "fade-in";
+  }
+  if (
+    document.body.scrollTop > 3300 ||
+    document.documentElement.scrollTop > 3300
+  ) {
+    document.getElementById("p4").className = "fade-in";
+  }
+  if (
+    document.body.scrollTop > 4400 ||
+    document.documentElement.scrollTop > 4400
+  ) {
+    document.getElementById("p5").className = "slideRight";
+  }
+  if (
+    document.body.scrollTop > 4300 ||
+    document.documentElement.scrollTop > 4300
+  ) {
+    document.getElementById("p6").className = "slideLeft";
+  }
 }
 
 document.getElementById("image1").onclick = function () {
