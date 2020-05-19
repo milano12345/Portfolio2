@@ -384,7 +384,6 @@ document.getElementById("image4").onclick = function () {
 document.getElementById("darkMode").onclick = function () {
   var audio = new Audio("images/swish.mp3");
   audio.play();
-  console.log("working");
 
   if (document.getElementById("darkMode").classList.length < 1) {
     document.getElementById("darkMode").classList.add("darkMode");
@@ -392,11 +391,14 @@ document.getElementById("darkMode").onclick = function () {
     document.getElementById("banner").classList.add("dark");
     document.getElementById("h2").classList.add("dark-text");
     document.getElementById("wrapper").classList.add("dark-wrapper");
+    document.getElementById("button").classList.add("dark-text");
   } else {
     document.getElementById("darkMode").classList.remove("darkMode");
     document.getElementById("darkMode").classList.remove("dark-text");
     document.getElementById("banner").classList.remove("dark");
     document.getElementById("h2").classList.remove("dark-text");
     document.getElementById("wrapper").classList.remove("dark-wrapper");
+    document.getElementById("button").classList.remove("dark-text");
+    document.getElementById("two").classList.remove("dark");
   }
 };
