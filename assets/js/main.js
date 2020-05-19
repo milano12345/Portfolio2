@@ -235,26 +235,26 @@ function mobileVersion() {
     document.getElementById("text").className = "slideLeft";
   }
   if (
-    document.body.scrollTop > 2250 ||
-    document.documentElement.scrollTop > 2250
+    document.body.scrollTop > 2350 ||
+    document.documentElement.scrollTop > 2350
   ) {
     document.getElementById("p1").className = "fade-in";
   }
   if (
-    document.body.scrollTop > 2900 ||
-    document.documentElement.scrollTop > 2900
+    document.body.scrollTop > 3100 ||
+    document.documentElement.scrollTop > 3100
   ) {
     document.getElementById("p2").className = "fade-in";
   }
   if (
-    document.body.scrollTop > 3900 ||
-    document.documentElement.scrollTop > 3900
+    document.body.scrollTop > 4100 ||
+    document.documentElement.scrollTop > 4100
   ) {
     document.getElementById("p3").className = "fade-in";
   }
   if (
-    document.body.scrollTop > 4800 ||
-    document.documentElement.scrollTop > 4800
+    document.body.scrollTop > 5000 ||
+    document.documentElement.scrollTop > 5000
   ) {
     document.getElementById("p4").className = "fade-in";
   }
