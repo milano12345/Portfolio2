@@ -263,6 +263,14 @@ function bounce() {
   console.log("working");
 }
 
+document.getElementById("image1").onclick = function () {
+  if (document.getElementById("image1").classList.length > 0) {
+    document.getElementById("image1").classList.remove("bounce");
+  } else {
+    document.getElementById("image1").classList.add("bounce");
+  }
+};
+
 document.getElementById("image2").onclick = function () {
   if (document.getElementById("image2").classList.length > 0) {
     document.getElementById("image2").classList.remove("bounce");
