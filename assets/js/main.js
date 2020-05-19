@@ -229,14 +229,14 @@ function mobileVersion() {
     document.getElementById("recent").className = "slideRight";
   }
   if (
-    document.body.scrollTop > 2150 ||
-    document.documentElement.scrollTop > 2150
+    document.body.scrollTop > 2200 ||
+    document.documentElement.scrollTop > 2200
   ) {
     document.getElementById("text").className = "slideLeft";
   }
   if (
-    document.body.scrollTop > 2200 ||
-    document.documentElement.scrollTop > 2200
+    document.body.scrollTop > 2250 ||
+    document.documentElement.scrollTop > 2250
   ) {
     document.getElementById("p1").className = "fade-in";
   }
