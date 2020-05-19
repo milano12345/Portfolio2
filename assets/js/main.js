@@ -209,46 +209,46 @@ function mobileVersion() {
     document.getElementById("image2").classList.add("bounce");
   }
   if (
-    document.body.scrollTop > 600 ||
-    document.documentElement.scrollTop > 600
+    document.body.scrollTop > 700 ||
+    document.documentElement.scrollTop > 700
   ) {
     document.getElementById("frontend").className = "slideRight";
     document.getElementById("image3").classList.add("bounce");
   }
   if (
-    document.body.scrollTop > 1300 ||
-    document.documentElement.scrollTop > 1300
+    document.body.scrollTop > 1600 ||
+    document.documentElement.scrollTop > 1600
   ) {
     document.getElementById("backend").className = "slideLeft";
     document.getElementById("image4").classList.add("bounce");
   }
   if (
-    document.body.scrollTop > 1700 ||
-    document.documentElement.scrollTop > 1700
+    document.body.scrollTop > 2000 ||
+    document.documentElement.scrollTop > 2000
   ) {
     document.getElementById("recent").className = "slideRight";
   }
   if (
-    document.body.scrollTop > 1750 ||
-    document.documentElement.scrollTop > 1750
+    document.body.scrollTop > 2150 ||
+    document.documentElement.scrollTop > 2150
   ) {
     document.getElementById("text").className = "slideLeft";
   }
   if (
-    document.body.scrollTop > 2000 ||
-    document.documentElement.scrollTop > 2000
+    document.body.scrollTop > 2200 ||
+    document.documentElement.scrollTop > 2200
   ) {
     document.getElementById("p1").className = "fade-in";
   }
   if (
-    document.body.scrollTop > 2800 ||
-    document.documentElement.scrollTop > 2800
+    document.body.scrollTop > 2900 ||
+    document.documentElement.scrollTop > 2900
   ) {
     document.getElementById("p2").className = "fade-in";
   }
   if (
-    document.body.scrollTop > 3800 ||
-    document.documentElement.scrollTop > 3800
+    document.body.scrollTop > 3900 ||
+    document.documentElement.scrollTop > 3900
   ) {
     document.getElementById("p3").className = "fade-in";
   }
@@ -259,14 +259,14 @@ function mobileVersion() {
     document.getElementById("p4").className = "fade-in";
   }
   if (
-    document.body.scrollTop > 5200 ||
-    document.documentElement.scrollTop > 5200
+    document.body.scrollTop > 5300 ||
+    document.documentElement.scrollTop > 5300
   ) {
     document.getElementById("p5").className = "slideRight";
   }
   if (
-    document.body.scrollTop > 5300 ||
-    document.documentElement.scrollTop > 5300
+    document.body.scrollTop > 5400 ||
+    document.documentElement.scrollTop > 5400
   ) {
     document.getElementById("p6").className = "slideLeft";
   }
