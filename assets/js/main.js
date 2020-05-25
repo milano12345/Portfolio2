@@ -379,6 +379,17 @@ document.getElementById("image4").onclick = function () {
   }
 };
 
+document.getElementById("spinButton").onclick = function () {
+  if (document.getElementById("spinButton").classList.length > 0) {
+    document.getElementById("spinButton").classList.remove("spin");
+    document.getElementById("image1").classList.add("spin");
+  } else {
+    document.getElementById("spinButton").classList.add("spin");
+    document.getElementById("image1").classList.remove("spin");
+    document.getElementById("spinButton").innerHTML = "Spin It Again";
+  }
+};
+
 // Sunset MODE
 
 document.getElementById("darkMode").onclick = function () {
