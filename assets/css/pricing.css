@@ -73,9 +73,6 @@ body {
   }
 }
 @media screen and (min-width: 1120px) {
-  .grid-1-5 {
-    width: 20%;
-  }
   .grid-1-5:nth-child(odd), .grid-1-5:nth-child(3n+1) {
     clear: none;
   }
@@ -172,10 +169,6 @@ ul li {
   font-size: 1em;
   font-weight: 700;
   padding: 0.75em 1.5em;
-  position: absolute;
-  bottom: 1.25em;
-  left: 50%;
-  margin-left: -60px;
   text-decoration: none;
   width: 120px;
 }
